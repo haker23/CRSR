@@ -8,6 +8,17 @@ public class UserRegisterForm {
 
     private String name;
 
+    public UserRegisterForm() {
+    }
+
+    public UserRegisterForm(Integer userId, String name, Integer phone, String email, String password) {
+        this.userId = userId;
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
+    }
+
     private Integer phone;
 
     private String email;

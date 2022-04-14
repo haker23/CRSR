@@ -2,12 +2,9 @@ package com.example.crsr.controller;
 
 
 import com.example.crsr.controller.Form.UserRegisterForm;
-import com.example.crsr.result.R;
-import com.example.crsr.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * <p>
@@ -18,15 +15,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since 2022-04-09
  */
 @Controller
-@RequestMapping("/user")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
-
-    @GetMapping("/signUp")
-    public R userSignUp(UserRegisterForm userRegisterForm) {
-        return userService.register(userRegisterForm);
+    @GetMapping("signUp")//页面的url地址
+    public String getindex(Model model)//对应函数
+    {
+        UserRegisterForm user1 = new UserRegisterForm(123,"ddd",123,"232","123");
+        model.addAttribute("user",user1);//储存javabean
+        model.addAttribute("name","bigsai");
+        return "signUp";//与templates中index.html对应
     }
 
 }

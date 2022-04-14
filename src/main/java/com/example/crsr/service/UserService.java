@@ -2,8 +2,6 @@ package com.example.crsr.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.crsr.entity.User;
-import com.example.crsr.result.R;
-import com.example.crsr.controller.Form.UserRegisterForm;
 
 /**
  * <p>
@@ -15,5 +13,4 @@ import com.example.crsr.controller.Form.UserRegisterForm;
  */
 public interface UserService extends IService<User> {
 
-    R register(UserRegisterForm userRegisterForm);
 }

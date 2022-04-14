@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+hello 第一个Thymeleaf程序
+<div th:text="${name}">name是bigsai(我是离线数据)</div>
+<h2>JavaBean对象</h2>
+<table>
+    <tr>
+        <td>介绍</td>
+        <td th:text="${user.name}"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -19,9 +19,4 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
-    public R register(UserRegisterForm userRegisterForm) {
-
-        return new R(true, "注册成功");
-    }
-
 }
